@@ -1198,7 +1198,7 @@
 				const C = {
 						textTransform: "uppercase"
 					},
-					E = '"Roboto", "Helvetica", "Arial", sans-serif';
+					E = '"Roboto", "Helvetica", "Arial", sans-serif, "Seagull Md Bt"';
 
 				function P(e, t) {
 					const n = "function" == typeof t ? t(e) : t,
@@ -26482,10 +26482,10 @@
 								UR: "image/rarity/UR.png"
 							},
 							A = {
-								"sve-card-cn": "/font/cn.ttf",
-								"sve-card-ja": "/asset/font/ja.otf",
-								"sve-card-en": "/asset/font/en.TTF",
-								"sve-card-fr": "/asset/font/en.TTF"
+								"sve-card-cn": "./font/cn.ttf",
+								"sve-card-ja": "./font/ja.otf",
+								"sve-card-en": "./font/en.TTF",
+								"sve-card-fr": "./font/en.TTF"
 							},
 							Z = {
 								onLoadAll: () => {},
@@ -28240,7 +28240,7 @@
 									radius: 34
 								},
 								textFontFamily: "sve-card-ja",
-								footerFontFamily: "sve-card-fr",
+								footerFontFamily: "sans-serif",
 								desc: {
 									color: "#FFF",
 									fontSize: 14,
@@ -28608,7 +28608,7 @@
 								card: {
 									position: [82, 68, 677]
 								},
-								textFontFamily: "sve-card-fr",
+								textFontFamily: "sve-card-ja",
 								frame: {
 									position: [0, 0, 1920, 1080]
 								},
@@ -28898,6 +28898,7 @@
 									Me(this, "isCN", (e => "sve-card-cn" === e)),
 									Me(this, "isEN", (e => "sve-card-en" === e)),
 									Me(this, "isFR", (e => "sve-card-fr" === e)),
+									Me(this, "isJP", (e => "sve-card-ja" === e)),
 									Me(this, "getText", (e => this.isCN(e.fontFamily) ? e.CHSText : (this.isEN(e.fontFamily) ? e.ENText : (this.isFR(e.fontFamily) ? e.FRText : e.JPText)))),
 									Me(this, "getCraftText", (e => this.isCN(e.fontFamily) ? je[this.cardData.craft] : (this.isEN(e.fontFamily) ? EN[this.cardData.craft] : (this.isFR(e.fontFamily) ? FR[this.cardData.craft] : Te[this.cardData.craft])))),
 									Me(this, "drawImage", (function(e) {
@@ -28986,6 +28987,7 @@
 											this.assetManager.loadFont(r.fontFamily), this.canvasContext.save(), this.canvasContext.fillStyle = r.color, this.canvasContext.font = "".concat(r.fontSize, "px ").concat(r.fontFamily), this.canvasContext.textBaseline = r.textBaseline;
 											const o = P(e, t, n, r.fontFamily, {
 												replaceKeyword: !0,
+												isJP: "sve-card-ja" === r.fontFamily,
 												isCHS: "sve-card-cn" === r.fontFamily,
 												isEN: "sve-card-en" === r.fontFamily,
 												isFR: "sve-card-fr" === r.fontFamily
@@ -38617,7 +38619,7 @@ stroke-dashoffset: -125px;
 					copyright: "© Cygames,Inc."
 				},
 				config: {
-					textFontFamily: "sve-card-en",
+					textFontFamily: "sve-card-ja",
 					cardNo: {
 						URColor: "#FFF"
 					},
