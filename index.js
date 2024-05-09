@@ -26482,10 +26482,10 @@
 								UR: "image/rarity/UR.png"
 							},
 							A = {
-								"sve-card-cn": "./font/cn.ttf",
-								"sve-card-ja": "./font/ja.otf",
-								"sve-card-en": "./font/en.TTF",
-								"sve-card-fr": "./font/en.TTF"
+								"sve-card-cn": "https://github.com/Marcherfu/sve-card/blob/master/asset/font/cn.ttf",
+								"sve-card-ja": "https://github.com/Marcherfu/sve-card/blob/master/asset/font/ja.otf",
+								"sve-card-en": "https://github.com/Marcherfu/sve-card/blob/master/asset/font/en.TTF",
+								"sve-card-fr": "https://github.com/Marcherfu/sve-card/blob/master/asset/font/en.TTF"
 							},
 							Z = {
 								onLoadAll: () => {},
