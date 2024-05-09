@@ -26482,10 +26482,10 @@
 								UR: "image/rarity/UR.png"
 							},
 							A = {
-								"sve-card-cn": "font/cn.ttf",
-								"sve-card-ja": "font/ja.otf",
-								"sve-card-en": "font/en.ttf",
-								"sve-card-fr": "font/en.ttf"
+								"sve-card-cn": "./font/cn.ttf",
+								"sve-card-ja": "./font/ja.otf",
+								"sve-card-en": "./font/en.ttf",
+								"sve-card-fr": "./font/en.ttf"
 							},
 							Z = {
 								onLoadAll: () => {},
@@ -28235,8 +28235,8 @@
 									position: [0, 0, 459, 642],
 									radius: 34
 								},
-								textFontFamily: "sve-card-ja",
-								footerFontFamily: "sans-serif",
+								textFontFamily: "sve-card-fr",
+								footerFontFamily: "sve-card-fr",
 								desc: {
 									color: "#FFF",
 									fontSize: 14,
@@ -28338,7 +28338,7 @@
 								kuroshiro: {
 									dictPath: ""
 								},
-								assetPath: "./asset"
+								assetPath: "./asset/"
 							},
 							ye = function(e) {
 								let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
