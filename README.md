@@ -48,10 +48,13 @@ You can also download the project and run it locally with Wamp, Xamp, Lamp, Mamp
 ## What i learned while doing this
 
 Identation good.
+
 I hate Heaven. But i love Haven. 
+
 I now hold a grudge against JavaScript. Lost 3 hours cause a conditionnal branch wanted to be written with ? and : and not with if and elses and did not understood that the object assignement i put in parentheses with the condition was actually working on couple conditions through the parentheses. (yeah, it was weird)
 
 ## Thanks
 
 [Haoxuan8](https://haoxuan8.github.io/sve-card/) himself for the base code.
+
 [Beautifier.io](https://beautifier.io/) for cleaning up the 200 lines code of Haoxuan8 into a clearer 40k lines indented code.
