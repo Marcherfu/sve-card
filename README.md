@@ -1,6 +1,6 @@
 # sve-card
 
-Based on [Haoxuan8](https://haoxuan8.github.io/sve-card/)'s version.
+Based on [Haoxuan8](https://github.com/haoxuan8/sve-card/)'s version.
 With English and French translation. (UI in English)
 
 <a href="https://www.npmjs.com/package/sve-card">
@@ -55,6 +55,6 @@ I now hold a grudge against JavaScript. Lost 3 hours cause a conditionnal branch
 
 ## Thanks
 
-[Haoxuan8](https://haoxuan8.github.io/sve-card/) himself for the base code.
+[Haoxuan8](https://github.com/haoxuan8/sve-card/) himself for the base code.
 
 [Beautifier.io](https://beautifier.io/) for cleaning up the 200 lines code of Haoxuan8 into a clearer 40k lines indented code.
