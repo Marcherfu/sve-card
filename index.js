@@ -26482,10 +26482,10 @@
 								UR: "image/rarity/UR.png"
 							},
 							A = {
-								"sve-card-cn": "./font/cn.ttf",
-								"sve-card-ja": "./font/ja.otf",
-								"sve-card-en": "./font/en.ttf",
-								"sve-card-fr": "./font/en.ttf"
+								"sve-card-cn": "/font/cn.ttf",
+								"sve-card-ja": "/asset/font/ja.otf",
+								"sve-card-en": "/asset/font/en.TTF",
+								"sve-card-fr": "/asset/font/en.TTF"
 							},
 							Z = {
 								onLoadAll: () => {},
@@ -26540,7 +26540,11 @@
 									this.loadingMap[t] = !0;
 									const n = document.createElement("style");
 									n.setAttribute("type", "text/css"), n.setAttribute("crossOrigin", "anonymous"), n.setAttribute("class", e);
-									const r = "\n            @font-face {\n            font-family: '" + e + "';\n            src: url('" + a().join(this.assetPath, A[e]) + "');\n        }";
+									const r = "\n            " +
+									"@font-face {\n" +
+									"	font-family: '" + e + "';\n" +
+									"	src: url('" + a().join(this.assetPath, A[e]) + "'); !important \n" +
+									"}";
 									n.appendChild(document.createTextNode(r)), document.head.appendChild(n);
 									const o = new(g())(e);
 									try {
