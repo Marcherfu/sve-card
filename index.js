@@ -28235,7 +28235,7 @@
 									position: [0, 0, 459, 642],
 									radius: 34
 								},
-								textFontFamily: "sve-card-fr",
+								textFontFamily: "sve-card-ja",
 								footerFontFamily: "sve-card-fr",
 								desc: {
 									color: "#FFF",
@@ -28604,7 +28604,7 @@
 								card: {
 									position: [82, 68, 677]
 								},
-								textFontFamily: "sve-card-ja",
+								textFontFamily: "sve-card-fr",
 								frame: {
 									position: [0, 0, 1920, 1080]
 								},
@@ -38613,7 +38613,7 @@ stroke-dashoffset: -125px;
 					copyright: "© Cygames,Inc."
 				},
 				config: {
-					textFontFamily: "a",
+					textFontFamily: "sve-card-en",
 					cardNo: {
 						URColor: "#FFF"
 					},
