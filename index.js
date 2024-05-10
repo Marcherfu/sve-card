@@ -29025,7 +29025,7 @@
 											this.drawText(this.cardData.copyright, this.showcaseConfig.copyright)
 										})), Me(this, "drawTip", (() => {
 											var e, t;
-											const n = null !== (e = null === (t = this.showcaseData) || void 0 === t ? void 0 : t.tip) && void 0 !== e ? e : Be.defaultTip[this.isCN(this.showcaseConfig.tip.fontFamily) ? "CHS" : this.isEN(this.showcaseConfig.tip.fontFamily) ? "EN" : this.isFR(this.showcaseConfig.tip.fontFamily) ? "FR" : "JP"];
+											const n = null !== (e = null === (t = this.showcaseData) || void 0 === t ? void 0 : t.tip) && void 0 !== e ? e : Be.defaultTip[this.isCN(this.showcaseConfig.tip.fontFamily) ? "CHS" : this.isEN(this.showcaseConfig.tip.fontFamily) ? "EN" : this.isFR(this.showcaseConfig.tip.fontFamily) ? "FR" :"JP"];
 											this.drawText(n, this.showcaseConfig.tip)
 										})), Me(this, "drawTokenTip", (() => {
 											var e, t;
@@ -29144,7 +29144,7 @@
 						Ne(De, "defaultConfig", Re), Ne(De, "defaultTip", {
 							JP: "※画像は開発中のものです。実際の商品とは一部異なる場合がございます。",
 							CHS: "※卡片能力为开发中内容。",
-							EN: "*All stats and abilities are subject to change."?
+							EN: "*All stats and abilities are subject to change.",
 							FR: "Note : En cours de développement"
 						}), Ne(De, "defalutTokenTip", {
 							JP: "※このカードはトークンです。",
