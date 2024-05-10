@@ -1198,7 +1198,7 @@
 				const C = {
 						textTransform: "uppercase"
 					},
-					E = '"Roboto", "Helvetica", "Arial", sans-serif, "Seagull Md Bt"';
+					E = '"Roboto", "Helvetica", "Arial", sans-serif';
 
 				function P(e, t) {
 					const n = "function" == typeof t ? t(e) : t,
@@ -20581,7 +20581,7 @@
 									}
 
 									function n(e) {
-										this.g = document.createElement("div"), this.g.setAttribute("aria-hidden", "true"), this.g.appendChild(document.createTextNode(e)), this.h = document.createElement("span"), this.i = document.createElement("span"), this.m = document.createElement("span"), this.j = document.createElement("span"), this.l = -1, this.h.style.cssText = "max-width:none;display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;", this.i.style.cssText = "max-width:none;display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;", this.j.style.cssText = "max-width:none;display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;", this.m.style.cssText = "display:inline-block;width:200%;height:200%;font-size:14px;max-width:none;", this.h.appendChild(this.m), this.i.appendChild(this.j), this.g.appendChild(this.h), this.g.appendChild(this.i)
+										this.g = document.createElement("div"), this.g.setAttribute("aria-hidden", "true"), this.g.appendChild(document.createTextNode(e)), this.h = document.createElement("span"), this.i = document.createElement("span"), this.m = document.createElement("span"), this.j = document.createElement("span"), this.l = -1, this.h.style.cssText = "max-width:none;display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;", this.i.style.cssText = "max-width:none;display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;", this.j.style.cssText = "max-width:none;display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;", this.m.style.cssText = "display:inline-block;width:200%;height:200%;font-size:16px;max-width:none;", this.h.appendChild(this.m), this.i.appendChild(this.j), this.g.appendChild(this.h), this.g.appendChild(this.i)
 									}
 
 									function r(e, t) {
@@ -26365,7 +26365,8 @@
 								handlePunctuation: !1,
 								replaceKeyword: !1,
 								isCHS: !1,
-								isEN: !1
+								isEN: !1,
+								isFR: !1
 							}),
 							C = (e, t) => {
 								const n = k[e.text],
@@ -26482,10 +26483,10 @@
 								UR: "image/rarity/UR.png"
 							},
 							A = {
-								"sve-card-cn": "https://github.com/Marcherfu/sve-card/blob/master/asset/font/cn.ttf",
-								"sve-card-ja": "https://github.com/Marcherfu/sve-card/blob/master/asset/font/ja.otf",
-								"sve-card-en": "https://github.com/Marcherfu/sve-card/blob/master/asset/font/en.TTF",
-								"sve-card-fr": "https://github.com/Marcherfu/sve-card/blob/master/asset/font/en.TTF"
+								"sve-card-cn": "font/cn.ttf",
+								"sve-card-ja": "font/ja.otf",
+								"sve-card-en": "font/en.TTF",
+								"sve-card-fr": "font/en.TTF"
 							},
 							Z = {
 								onLoadAll: () => {},
@@ -26540,11 +26541,7 @@
 									this.loadingMap[t] = !0;
 									const n = document.createElement("style");
 									n.setAttribute("type", "text/css"), n.setAttribute("crossOrigin", "anonymous"), n.setAttribute("class", e);
-									const r = "\n            " +
-									"@font-face {\n" +
-									"	font-family: '" + e + "';\n" +
-									"	src: url('" + a().join(this.assetPath, A[e]) + "'); !important \n" +
-									"}";
+									const r = "\n            @font-face {\n	font-family: '" + e + "';\n	src: url('" + a().join(this.assetPath, A[e]) + "'); \n}";
 									n.appendChild(document.createTextNode(r)), document.head.appendChild(n);
 									const o = new(g())(e);
 									try {
@@ -28342,7 +28339,7 @@
 								kuroshiro: {
 									dictPath: ""
 								},
-								assetPath: "./asset/"
+								assetPath: "./asset"
 							},
 							ye = function(e) {
 								let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
@@ -28902,7 +28899,6 @@
 									Me(this, "getText", (e => this.isCN(e.fontFamily) ? e.CHSText : (this.isEN(e.fontFamily) ? e.ENText : (this.isFR(e.fontFamily) ? e.FRText : e.JPText)))),
 									Me(this, "getCraftText", (e => this.isCN(e.fontFamily) ? je[this.cardData.craft] : (this.isEN(e.fontFamily) ? EN[this.cardData.craft] : (this.isFR(e.fontFamily) ? FR[this.cardData.craft] : Te[this.cardData.craft])))),
 									Me(this, "drawImage", (function(e) {
-
 											if (e) {
 												for (var n = arguments.length, r = new Array(n > 1 ? n - 1 : 0), o = 1; o < n; o++) r[o - 1] = arguments[o];
 												t.canvasContext.drawImage(e, ...r)
@@ -38556,7 +38552,7 @@ stroke-dashoffset: -125px;
 			gu = o.p + "asset/021bee742b82fd6d451b.png",
 			vu = o.p + "asset/41a25e608317988efe0b.png",
 			yu = o.p + "asset/27ac2ded361cf771f071.png",
-			blank = o.p + "asset/blank.png";
+			blankimg = o.p + "asset/blank.png";
 
 		function bu(e, t) {
 			return function(e) {
@@ -38629,7 +38625,7 @@ stroke-dashoffset: -125px;
 				},
 				showcaseData: {
 					fromImage: {
-						src: blank,
+						src: blankimg,
 						height: 128,
 						width: 336
 					}
@@ -39374,7 +39370,7 @@ stroke-dashoffset: -125px;
 				value: "EP"
 			}],
 			rc = [{
-				label: "System Default",
+				label: "Default",
 				value: "a"
 			}, {
 				label: "Evolve JP",
@@ -39544,7 +39540,7 @@ stroke-dashoffset: -125px;
 				fullWidth: !0
 			}, n.createElement(rn, {
 				id: "demo-simple-select-label"
-			}, "Font style"), n.createElement(wi, {
+			}, "Language"), n.createElement(wi, {
 				sx: {
 					width: "100%"
 				},
@@ -39760,12 +39756,12 @@ stroke-dashoffset: -125px;
 						})
 					}))
 				}
-			}), n.createElement(el, {
+			}),/* n.createElement(el, {
 				sx: {
 					ml: 1
 				},
 				title: "[W.I.P.]日语汉字已自动添加注音，根据词库不同注音可能存在差异。"
-			}, n.createElement(il, null, n.createElement(al.Z, null))))), n.createElement(he, {
+			},*/ n.createElement(il, null, n.createElement(al.Z, null)))), n.createElement(he, {
 				item: !0,
 				xs: 12
 			}, n.createElement(ca, {
