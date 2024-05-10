@@ -26143,10 +26143,10 @@
 									src: "image/desc/fanfare.png",
 									height: 184,
 									width: 187,
-									ENText: "[Fanfare]",
-									FRText: "[Fanfare]",
 									JPText: "《ファンファーレ》",
-									CHSText: "《入场曲》"
+									CHSText: "《入场曲》",
+									ENText: "[Fanfare]",
+									FRText: "[Fanfare]"
 								},
 								"/lastword": {
 									src: "image/desc/lastword.png",
@@ -26180,7 +26180,7 @@
 									height: 184,
 									width: 187,
 									ENText: "[Serve]",
-									ENText: "Repas",
+									FRText: "[Repas]",
 									JPText: "《食事》",
 									CHSText: "《吃饭》"
 								},
@@ -26189,7 +26189,7 @@
 									height: 184,
 									width: 187,
 									ENText: "[Evolve]",
-									FRText: "E",
+									FRText: "[E]",
 									JPText: "《進化》",
 									CHSText: "《进化》"
 								},
@@ -26365,8 +26365,6 @@
 								handlePunctuation: !1,
 								replaceKeyword: !1,
 								isCHS: !1,
-								isEN: !1,
-								isFR: !1
 							}),
 							C = (e, t) => {
 								const n = k[e.text],
@@ -26410,6 +26408,7 @@
 											})), i = "")
 										};
 									return (0, o.forEach)(e, ((e, t) => {
+										
 										"/" === e ? (l(), a = !0, i += e) : a ? (i += e, k[i] && (n.replaceKeyword ? (i = n.isCHS ? k[i].CHSText : i = n.isEN ? k[i].ENText : i = n.isFR ? k[i].FRText : k[i].JPText, l()) : r.push({
 											type: "icon",
 											text: i
@@ -28878,7 +28877,8 @@
 								"【": "】",
 								"《": "》",
 								"「": "」",
-								"『": "』"
+								"『": "』",
+								"[": "]"
 							},
 							ze = class extends le {
 								constructor(e) {
