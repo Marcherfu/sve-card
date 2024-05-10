@@ -26117,7 +26117,7 @@
 									height: 184,
 									width: 187,
 									ENText: "[Engage]",
-									FRText: "[Engagement]",
+									FRText: "[Engagez",
 									JPText: "《アクト》",
 									CHSText: "《ACT》"
 								},
