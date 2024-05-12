@@ -27918,6 +27918,9 @@
 							get isUR() {
 								return "UR" === this.data.rarity
 							}
+							get isTarot() {
+								return "Tarot" === this.data.cardStyle
+							}
 							get isLeader() {
 								return "Leader" === this.data.cardType
 							}
@@ -28022,15 +28025,15 @@
 											offsetX: .5 * (e.naturalWidth - r),
 											offsetY: .5 * (e.naturalHeight - o)
 										};
-										i.canvasContext.drawImage(e, a.offsetX, a.offsetY, a.width, a.height, ...n)
+                                        i.canvasContext.drawImage(e, a.offsetX, a.offsetY, a.width, a.height, ...n)
 									}
 								})), fe(this, "drawFrame", (() => {
 									const e = this.assetManager.loadFrame();
 									this.drawImage(e, ...this.config.frame.position)
 								})), fe(this, "drawCardImage", (() => {
 									const e = this.assetManager.loadCardImage(),
-										[t, n, r, o] = this.config.cardImage.position,
-										i = this.config.cardImage.radius;
+										[t, n, r, o] = ((this.isUR || this.isLeader) ? this.config.cardImage.URposition : ((this.isLG || this.isTarot) ? this.config.cardImage.LGposition : this.config.cardImage.position)),
+										i = ((this.isUR || this.isLeader) ? this.config.cardImage.URradius : ((this.isLG) ? this.config.cardImage.LGradius : this.config.cardImage.radius));
 									this.canvasContext.save(), this.canvasContext.beginPath(), this.canvasContext.moveTo(t + i, n), this.canvasContext.lineTo(t + r - i, n), this.canvasContext.quadraticCurveTo(t + r, n, t + r, n + i), this.canvasContext.lineTo(t + r, n + o - i), this.canvasContext.quadraticCurveTo(t + r, n + o, t + r - i, n + o), this.canvasContext.lineTo(t + i, n + o), this.canvasContext.quadraticCurveTo(t, n + o, t, n + o - i), this.canvasContext.lineTo(t, n + i), this.canvasContext.quadraticCurveTo(t, n, t + i, n), this.canvasContext.closePath(), this.canvasContext.clip(), this.drawCoverImage(e, t, n, r, o), this.canvasContext.restore()
 								})), fe(this, "getDescLines", ((e, t, n, r) => {
 									this.assetManager.loadFont(r.fontFamily), this.canvasContext.save(), this.canvasContext.fillStyle = r.color, this.canvasContext.font = "".concat(r.fontSize, "px ").concat(r.fontFamily), this.canvasContext.textBaseline = r.textBaseline;
@@ -28232,8 +28235,12 @@
 								size: [459, 642],
 								canvasSize: null,
 								cardImage: {
-									position: [0, 0, 459, 642],
-									radius: 34
+									position: [21, 25, 417, 502],
+									radius: 0,
+									LGposition : [7, 8, 445, 530],
+									LGradius: 34,
+									URposition : [0, 0, 459, 642],
+									URradius: 34
 								},
 								textFontFamily: "sve-card-ja",
 								footerFontFamily: "sans-serif",
@@ -28366,8 +28373,13 @@
 										position: [c, f, Math.round(u), Math.round(l)]
 									},
 									cardImage: {
+										
 										position: pe(n.cardImage.position, d, c, f),
-										radius: n.cardImage.radius * d
+										LGposition: pe(n.cardImage.LGposition, d, c, f),
+										URposition: pe(n.cardImage.URposition, d, c, f),
+										radius: n.cardImage.radius * d,
+										LGradius: n.cardImage.LGradius * d,
+										URradius: n.cardImage.URradius * d
 									},
 									desc: me(me({
 										fontFamily: n.textFontFamily
@@ -38799,7 +38811,7 @@ stroke-dashoffset: -125px;
 				}
 			})), (0, n.useEffect)((function() {
 				i.current = new(Pu())(o.current, {
-					aspectRatio: 63 / 88,
+					aspectRatio: 848 / 1024,
 					viewMode: 2,
 					autoCropArea: 1
 				})
