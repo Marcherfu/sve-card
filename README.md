@@ -28,6 +28,7 @@ You can also download the project and run it locally with Wamp, Xamp, Lamp, Mamp
 |------------|:-------:|:-------:|:-------:|:-------:|
 | /act       | Engagement　| Engage　| アクト |   横置    |
 | /quick     | Instantané　| Quick　| クイック |   快速    |
+| /qs     | I　| Q　| Q |   快速    |
 | /start     | Activation　| Activate　| 起動 |   起动    |
 | /fanfare   | Fanfare　| Fanfare　| ファンファーレ |  入场曲   |
 | /lastword  | Dernières Volontés　| Last Words　| ラストワード |   谢幕曲   |
@@ -37,6 +38,7 @@ You can also download the project and run it locally with Wamp, Xamp, Lamp, Mamp
 | /evo | Evolution　| Evolve　| 進化 |  进化    |
 | /cost{0-9} | Coût PP (0-9)　| Cost (0-9)　| コスト{0-9} | 花费{0-9} |  
 | /costx| Coût PP 10　| Cost 10　| コスト10 |  花费10   |
+| /costc| Coût PP X　| Cost X　| コストX |  花费X   |
 | /forest | Sylvestres　| Forestcraft　| エルフ | 妖精 |
 | /sword | Royaux　| Swordcraft　| ロイヤル | 皇家 |
 | /rune | Esotériques　| Runecraft　| ウィッチ | 巫师 |
