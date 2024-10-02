@@ -26121,6 +26121,15 @@
 									JPText: "《アクト》",
 									CHSText: "《ACT》"
 								},
+								"/qs": {
+									src: "image/desc/qs.png",
+									height: 184,
+									width: 187,
+									ENText: "[Q]",
+									FRText: "[I]",
+									JPText: "《Q》",
+									CHSText: "《快速》"
+								},
 								"/quick": {
 									src: "image/desc/quick.png",
 									height: 88,
@@ -26291,6 +26300,15 @@
 									FRText: "(10)",
 									JPText: "《コスト10》",
 									CHSText: "《花费10》"
+								},
+								"/costc": {
+									src: "image/desc/costc.png",
+									height: 184,
+									width: 187,
+									ENText: "(X)",
+									FRText: "(X)",
+									JPText: "《コストX》",
+									CHSText: "《花费X》"
 								},
 								"/forest": {
 									src: "image/desc/forest.png",
@@ -29795,7 +29813,7 @@
 			boxSizing: "border-box"
 		}, e.container && {
 			display: "flex",
-			flexWrap: "wrap",
+			flexWrap: "wrap", //PA
 			width: "100%"
 		}, e.item && {
 			margin: 0
